@@ -10,7 +10,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-image: linear-gradient(to left, #d429c3, #ff4331, #f49d5d);
+  background-image: linear-gradient(to left, #684FA3, #ff4331, #f49d5d);
   background-size: 500% 100%;
   animation: animation-degrade 5s infinite alternate ;
   
@@ -25,7 +25,7 @@ body {
   }
 }
 
-/*------------------------ animação borda -------------------------*/
+/*------------------- animação borda perfil -------------------------*/
 
 .caixa {
   position: relative;
@@ -53,7 +53,7 @@ body {
   content: '';
   position: absolute;
   inset: 4px;
-  background: #4b4b4b;
+  background: white;
   border-radius: 50%;
   z-index: 1;
 }
@@ -61,7 +61,7 @@ body {
 .conteudo {
   position: absolute;
   inset: 15px;
-  border: 3px solid #040305;
+  border: 3px solid #4b4b4b;
   z-index: 2;
   border-radius: 50%;
   overflow: hidden;
@@ -77,7 +77,6 @@ body {
 }
 
 
-
 @keyframes animar {
   0% {
     transform: rotate(0deg);
@@ -87,18 +86,12 @@ body {
   }
 }
 
-/*------------------------ imagem de perfil -------------------------*/
-
-/* .img-perfil {
-    width: 200px; 
-    border-radius: 50%; 
-} */
-
 /*-------------------------- cards --------------------------------*/
 .card {
   width: 400px;
   height: 60px;
   border-radius: 30px;
+  font-weight: bold;
 }
 
 .card a {
@@ -108,23 +101,54 @@ body {
 }
 
 /*-------------------------- cards hover -------------------------*/
-.card-body:hover {
+.card:hover {
   color: white;
-  font-weight: bold
+  font-weight: bold;
+}
+.card-body:hover{
+  color: white;
+  transition: .8s;
+}
+.instagram{
+border: 2px #C03C8F solid; 
+transition: .5s;
+}
+
+.linkedin{
+  border: 2px #0073B1 solid; 
+  transition: .5s;
+}
+
+.github{
+  border: 2px #000000 solid; 
+  transition: .5s;
+}
+
+.contatos{
+  border: 2px green solid; 
+  transition: .5s;
 }
 
 .instagram:hover {
   background-color: #C03C8F;
+  border: 2px white solid; 
+  transition: .8s;
 }
 
 .linkedin:hover {
   background-color: #0073B1;
+  border: 2px white solid; 
+  transition: .8s;
 }
 
 .github:hover {
   background-color: #000000;
+  border: 2px white solid; 
+  transition: .8s;
 }
 
 .contatos:hover {
   background-color: green;
+  border: 2px white solid; 
+  transition: .8s;
 }
