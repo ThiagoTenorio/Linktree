@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+    <link rel="stylesheet" href=".css" />
     <link rel="stylesheet" href="style.css" />
     <link
       rel="stylesheet"
@@ -26,7 +27,7 @@
           </div>
           <div class="input-field">
             <i class="fa-solid fa-text-width"></i>
-            <input type="number" id="largura" required />
+            <input type="number" id="largura" step="0.01" required />
             <span>m</span>
           </div>
 
@@ -35,7 +36,7 @@
           </div>
           <div class="input-field">
             <i class="fa-solid fa-text-height"></i>
-            <input type="number" id="altura" required />
+            <input type="number" id="altura" step="0.01" required />
             <span>m</span>
           </div>
 
@@ -44,26 +45,18 @@
           </div>
           <div class="input-field">
             <span> <b>R$</b> </span>
-            <input type="number" id="valor" required />
+            <input type="number" id="valor" step="0.01" required />
           </div>
 
-          <button id="calculate">Calcular</button>
+          <button id="calculate" onclick="calcularValorTotal()">
+            Calcular
+          </button>
+
+          <div><p id="resultado"></p></div>
         </form>
-
-        <div id="infos">
-          <div id="result">
-            <div id="area-total">
-              <span id="metro-quadrado">10</span>
-              <span>Área total</span>
-            </div>
-            <div id="valor-total">
-              <span id="valor-final">52</span>
-              <span>R$</span>
-            </div>
-            <div></div>
-          </div>
-        </div>
       </section>
     </main>
+
+    <script src="./script.js"></script>
   </body>
 </html>
