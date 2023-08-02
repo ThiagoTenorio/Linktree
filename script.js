@@ -8,6 +8,7 @@ form.addEventListener('submit', function (event) {
   const altura = parseFloat(document.getElementById('altura').value);
   const vernizsim = document.getElementById('vernizsim').checked;
 
+
   const metroQuadrado = largura * altura;
 
   let valorTotal = metroQuadrado * valor;
@@ -16,10 +17,13 @@ form.addEventListener('submit', function (event) {
     document.getElementById('resultado').innerHTML = "Por favor, insira <b>valores válidos</b> maiores que zero.";
     return;
   }
-
+  const verniz = metroQuadrado * 10;
   if (vernizsim) {
-    valorTotal = (metroQuadrado * 10) + valorTotal;
+    valorTotal = verniz + valorTotal;
   }
 
-  document.getElementById('resultado').innerHTML = `Área total: <b>${metroQuadrado.toFixed(2)} m²</b><br>Valor total: R$ <b>${valorTotal.toFixed(2)}</b>`;
+  document.getElementById('vernizValor').innerHTML = `+ R$ ${verniz}`;
+
+  document.getElementById('resultado').innerHTML = `Área total: <b>${metroQuadrado.toFixed(2)} m²</b><br>Valor total: R$ <b>${valorTotal.toFixed(2)}</b>`
+
 });

@@ -15,7 +15,7 @@
   <body>
     <main id="container">
       <section id="img">
-        <img src="./img/Logo - Grafica.png" alt="" />
+        <img src="img/Logo - Completa.jpeg" alt="" />
       </section>
 
       <section id="calculator">
@@ -51,17 +51,22 @@
           <div class="input-box">
             <fieldset>
               <legend>Acabamento de verniz (R$10/m²)</legend>
-              <input id="vernizsim" type="radio" name="verniz" value="S" />
-              <label for="vernizsim">Sim</label>
-              <input
-                id="verniznao"
-                type="radio"
-                name="verniz"
-                value="N"
-                checked
-              />
-              <label for="verniznao">Não</label>
+              <div>
+                <input id="vernizsim" type="radio" name="verniz" value="S" />
+                <label for="vernizsim">Sim</label>
+              </div>
+              <div>
+                <input
+                  id="verniznao"
+                  type="radio"
+                  name="verniz"
+                  value="N"
+                  checked
+                />
+                <label for="verniznao">Não</label>
+              </div>
             </fieldset>
+            <p id="vernizValor"></p>
           </div>
 
           <button id="calculate" onclick="calcularValorTotal()">
