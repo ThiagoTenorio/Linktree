@@ -69,6 +69,32 @@
             <p id="vernizValor"></p>
           </div>
 
+          <div class="input-box">
+            <fieldset>
+              <legend>Acabamento de banner ?</legend>
+              <div>
+                <input
+                  id="acabamentosim"
+                  type="radio"
+                  name="acabamento"
+                  value="S"
+                />
+                <label for="acabamentosim">Sim</label>
+              </div>
+              <div>
+                <input
+                  id="acabamentonao"
+                  type="radio"
+                  name="acabamento"
+                  value="N"
+                  checked
+                />
+                <label for="acabamentonao">Não</label>
+              </div>
+            </fieldset>
+            <p id="acabamentoValor"></p>
+          </div>
+
           <button id="calculate" onclick="calcularValorTotal()">
             Calcular
           </button>
