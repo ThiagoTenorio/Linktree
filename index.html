@@ -48,12 +48,28 @@
             <input type="number" id="valor" step="0.01" required />
           </div>
 
+          <div class="input-box">
+            <fieldset>
+              <legend>Acabamento de verniz (R$10/m²)</legend>
+              <input id="vernizsim" type="radio" name="verniz" value="S" />
+              <label for="vernizsim">Sim</label>
+              <input
+                id="verniznao"
+                type="radio"
+                name="verniz"
+                value="N"
+                checked
+              />
+              <label for="verniznao">Não</label>
+            </fieldset>
+          </div>
+
           <button id="calculate" onclick="calcularValorTotal()">
             Calcular
           </button>
-
-          <div><p id="resultado"></p></div>
         </form>
+
+        <p id="resultado"></p>
       </section>
     </main>
 
