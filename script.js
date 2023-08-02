@@ -22,8 +22,7 @@ form.addEventListener('submit', function (event) {
     valorTotal = verniz + valorTotal;
   }
 
-  document.getElementById('vernizValor').innerHTML = `+ R$ ${verniz}`;
+  document.getElementById('vernizValor').innerHTML = `+ R$ ${verniz.toFixed(2)}`;
 
   document.getElementById('resultado').innerHTML = `Área total: <b>${metroQuadrado.toFixed(2)} m²</b><br>Valor total: R$ <b>${valorTotal.toFixed(2)}</b>`
-
 });
