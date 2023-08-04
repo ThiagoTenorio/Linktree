@@ -28,7 +28,7 @@ form.addEventListener('submit', function (event) {
   const verniz = Math.trunc(metroQuadrado) * 10;
   if (vernizsim) {
     valorTotal += verniz;
-    document.getElementById('vernizValor').innerHTML = `+ R$ ${verniz.toFixed(2)}`;
+    document.getElementById('vernizValor').innerHTML = `<hr>+ R$ ${verniz.toFixed(2)}`;
   } else {
     document.getElementById('vernizValor').innerHTML = '';
   }
@@ -38,7 +38,7 @@ form.addEventListener('submit', function (event) {
   if (acabamentosim) {
     const acabamentoValor = calcularAcabamentoValor(metroQuadrado);
     valorTotal += acabamentoValor;
-    document.getElementById('acabamentoValor').innerHTML = `+ R$ ${acabamentoValor.toFixed(2)}`;
+    document.getElementById('acabamentoValor').innerHTML = `<hr>+ R$ ${acabamentoValor.toFixed(2)}`;
   } else {
     document.getElementById('acabamentoValor').innerHTML = '';
   }
@@ -74,17 +74,17 @@ form.addEventListener('submit', function (event) {
   const ilhosVulcanizado = ilhos + valorIlhos
   if (ilhosim) {
     valorTotal += ilhosVulcanizado;
-    document.getElementById('ilhosValor').innerHTML = `Vulcanização: R$${ilhos.toFixed(2)}<br>
-    Ilhos: R$${valorIlhos.toFixed(2)}<br>`;
+    document.getElementById('ilhosValor').innerHTML = `<hr>V : R$${ilhos.toFixed(2)}, 
+    I : R$${valorIlhos.toFixed(2)}<br>`;
   } else {
     document.getElementById('ilhosValor').innerHTML = '';
   }
 
   // RETORNO DO RESULTADO FINAL:
 
-  document.getElementById('resultado').innerHTML = `Metro Quadrado: ${metroQuadrado.toFixed(2)} m²<br>
-  Metro Linear: ${metroLinear.toFixed(2)} eme<br>
-  <h3>Valor total: R$ ${valorTotal.toFixed(2)}</h3>`;
+  document.getElementById('resultado').innerHTML = `Área Total: ${metroQuadrado.toFixed(2)} m²<br>
+  Área Linear: ${metroLinear.toFixed(2)} eme
+  <hr><h3>Valor total: R$ ${valorTotal.toFixed(2)}</h3>`;
 });
 
 
