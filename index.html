@@ -71,7 +71,7 @@
 
           <div class="input-box">
             <fieldset>
-              <legend>Acabamento de banner ?</legend>
+              <legend>Acabamento de banner</legend>
               <div>
                 <input
                   id="acabamentosim"
@@ -93,6 +93,29 @@
               </div>
             </fieldset>
             <p id="acabamentoValor"></p>
+          </div>
+
+          <div class="input-box">
+            <fieldset>
+              <legend>
+                Acabamento de ilhós(R$1.50/40cm) + vulcanização(R$5/eme)
+              </legend>
+              <div>
+                <input id="ilhossim" type="radio" name="ilhos" value="S" />
+                <label for="ilhossim">Sim</label>
+              </div>
+              <div>
+                <input
+                  id="ilhosnao"
+                  type="radio"
+                  name="ilhos"
+                  value="N"
+                  checked
+                />
+                <label for="ilhosnao">Não</label>
+              </div>
+            </fieldset>
+            <p id="ilhosValor"></p>
           </div>
 
           <button id="calculate" onclick="calcularValorTotal()">
