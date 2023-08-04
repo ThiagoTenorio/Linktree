@@ -41,11 +41,11 @@ form.addEventListener('submit', function (event) {
 function calcularAcabamentoValor(metroQuadrado) {
   let acabamentoValor = 0;
 
-  if (metroQuadrado > 0 && metroQuadrado < 1) {
+  if (metroQuadrado > 0 && metroQuadrado <= 1) {
     acabamentoValor += 5;
-  } else if (metroQuadrado >= 1 && metroQuadrado < 1.5) {
+  } else if (metroQuadrado > 1 && metroQuadrado <= 1.5) {
     acabamentoValor += 7;
-  } else if (metroQuadrado >= 1.5) {
+  } else if (metroQuadrado > 1.5) {
     acabamentoValor += 20;
   }
 
