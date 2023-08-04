@@ -19,7 +19,7 @@ form.addEventListener('submit', function (event) {
     return;
   }
 
-  const verniz = metroQuadrado * 10;
+  const verniz = Math.trunc(metroQuadrado) * 10;
   if (vernizsim) {
     valorTotal += verniz;
     document.getElementById('vernizValor').innerHTML = `+ R$ ${verniz.toFixed(2)}`;
