@@ -63,7 +63,7 @@ form.addEventListener('submit', function (event) {
 
   function calcularValorIlhos(cm) {
     const valorPorIntervalo = 1.50;
-    const intervalos = Math.floor(cm / 40)
+    const intervalos = Math.floor(cm / 40 - 4)
 
     const valorAdicional = intervalos * valorPorIntervalo;
     return valorAdicional.toFixed(2);
