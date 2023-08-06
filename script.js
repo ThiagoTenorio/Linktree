@@ -69,7 +69,7 @@ form.addEventListener('submit', function (event) {
     return valorAdicional.toFixed(2);
   }
 
-  const ilhos = Math.trunc(metroLinear) * 5;
+  const ilhos = metroLinear * 5;
   const valorIlhos = parseFloat(calcularValorIlhos(cm));
   const ilhosVulcanizado = ilhos + valorIlhos
   if (ilhosim) {
