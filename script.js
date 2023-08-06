@@ -36,21 +36,21 @@ form.addEventListener('submit', function (event) {
 
   // CALCULO E RETORNO BANNER:
   if (acabamentosim) {
-    const acabamentoValor = calcularAcabamentoValor(metroQuadrado);
+    const acabamentoValor = calcularAcabamentoValor(largura);
     valorTotal += acabamentoValor;
     document.getElementById('acabamentoValor').innerHTML = `<hr>+ R$ ${acabamentoValor.toFixed(2)}`;
   } else {
     document.getElementById('acabamentoValor').innerHTML = '';
   }
 
-  function calcularAcabamentoValor(metroQuadrado) {
+  function calcularAcabamentoValor(largura) {
     let acabamentoValor = 0;
 
-    if (metroQuadrado > 0 && metroQuadrado <= 1) {
+    if (largura > 0 && largura <= 1) {
       acabamentoValor += 5;
-    } else if (metroQuadrado > 1 && metroQuadrado <= 1.5) {
+    } else if (largura > 1 && largura <= 1.5) {
       acabamentoValor += 7;
-    } else if (metroQuadrado > 1.5) {
+    } else if (largura > 1.5) {
       acabamentoValor += 20;
     }
 
