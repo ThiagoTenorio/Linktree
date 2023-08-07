@@ -25,13 +25,21 @@ form.addEventListener('submit', function (event) {
   }
 
   // CALCULO E RETORNO VERNIZ:
-  const verniz = Math.trunc(metroQuadrado) * 10;
+  let verniz = 0;
+
+  if (metroQuadrado < 1) {
+    verniz = metroQuadrado * 10;
+  } else {
+    verniz = Math.trunc(metroQuadrado) * 10;
+  }
+
   if (vernizsim) {
     valorTotal += verniz;
     document.getElementById('vernizValor').innerHTML = `<hr>+ R$ ${verniz.toFixed(2)}`;
   } else {
     document.getElementById('vernizValor').innerHTML = '';
   }
+
 
 
   // CALCULO E RETORNO BANNER:
@@ -86,6 +94,3 @@ form.addEventListener('submit', function (event) {
   Área Linear: ${metroLinear.toFixed(2)} eme
   <hr><h3>Valor total: R$ ${valorTotal.toFixed(2)}</h3>`;
 });
-
-
-
